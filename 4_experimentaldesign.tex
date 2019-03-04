@@ -23,13 +23,13 @@
 %\label{table1}
 %\end{table}
 
-To examine the effects of MOEA/D-RAD we perform a comparative experiment of BiBBOB benchmark functions. In this experiment, we use the MOEA/D-DE implemented by the MOEADr package~\cite{moeadr_package}, modified to include Resource Allocation as described in the previous section. We compare three different algorithms MOEA/D-DE and MOEA/D-DRA as well as the proposed MOEA/D-RAD.
+To examine the effects of MOEA/D-RAD we perform a comparative experiment of bbob-biobj benchmark functions. In this experiment, we use the MOEA/D-DE implemented by the MOEADr package~\cite{moeadr_package}, modified to include Resource Allocation as described in the previous section. We compare three different algorithms MOEA/D-DE and MOEA/D-DRA as well as the proposed MOEA/D-RAD.
 
 \subsection{Target Problems}\label{target_problems}
 
-The Black-Box Optimization Bi-Objective Benchmark (bbob-biobj) test functions~\cite{tusar2016coco} are used as our benchmark problem sets. This test suit is composed of 55 bi-objective functions combined into 15 different classes.
+The Black-Box Optimization Bi-Objective Benchmark (bbob-biobj) test functions~\cite{tusar2016coco} are used as our benchmark problem sets. This test suit is composed of 55 bi-objective functions combined into 15 different groups.
 
-We list below the function classes:
+We list below the function groups:
 
 \begin{itemize}
 	\item Group 1: separable - separable;% ($f_1, f_2, f_{11}$)
@@ -49,7 +49,7 @@ We list below the function classes:
 	\item Group 15: weakly-structured - weakly-structured.% ($f_{53}, f_{54}, f_{55}$)
 \end{itemize}
 
-Here we give a simple explanation of the classes. A separable function does not show any dependencies between the variables while a multi-modal function have at least two minima. Moderate- and ill-conditioned have a high sensitivity in the contribution of a solution to the objective function value~\cite{hansen2011impacts}. Finally, a weakly-structured function is a function that the general structure is very unclear~\cite{finck2010real}.
+Here we give a simple explanation of the groups. A separable function does not show any dependencies between the variables while a multi-modal function have at least two minima. Moderate- and ill-conditioned have a high sensitivity in the contribution of a solution to the objective function value~\cite{hansen2011impacts}. Finally, a weakly-structured function is a function that the general structure is very unclear~\cite{finck2010real}.
 
 
 \subsection{Experimental Parameters}

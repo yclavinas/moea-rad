@@ -1,6 +1,6 @@
 \section{Introduction}
 
-Multi-objective Optimization Problems (MOP) are maximization (or minimization) problems characterized by multiple, conflicting objective functions. It arises in real world applications that require a compromise among multiple objectives.
+Multi-objective Optimization Problems (MOP) are maximization (or minimization) problems characterized by multiple, conflicting objective functions. It arises in real world applications that require a compromise among multiple objectives. An MOP can be summarized as
 
 
 %These $m$ multiple objective functions must be optimized simultaneously:
@@ -12,9 +12,9 @@ Multi-objective Optimization Problems (MOP) are maximization (or minimization) p
 
 where $m$ is the number of objective functions and $\mathbb{R}^m$ is the objective function space. $x \in \mathbb{R}^{D} = \{x_1, x_2, ..., x_D\}$ is a D-dimensional vector which represents a candidate solution with ${D}$ variables, $f: \mathbb{R}^{D} \rightarrow \mathbb{R}^{m}$ is a vector of objective functions.
 
-These objectives often conflict with each other, as there is no point in $\mathbb{R}^{D}$ that minimizes all the objectives at the same time. Consequently, the goal of the MOP optimization algorithm is to find the approximate set of solutions that balance the different objectives in an optimal way.
+These objectives often conflict with each other, as there is usually no solution in $\mathbb{R}^{D}$ that minimizes all the objectives at the same time. Consequently, the goal of the MOP optimization algorithm is to find the approximate set of solutions that balance the different objectives in an optimal way.
 
-This balance is defined by the concept of ``pareto dominance''. Given two solutions vectors $u, v$ in $\mathbb{R}^{D}$, $u$  Pareto-dominates $v$, we say that denoted by $f(u) \prec f(v)$, if and only if $f_k(u) \leq f_k(v), \forall_k \in \{1,..., m\}$ and $ f(u) \neq f(v)$. Likewise, a solution $x \in \mathbb{R}^{D}$ is considered Pareto-Optimal if there exists no other solution $y \in \mathbb{R}^{D}$ such that $f(y) \succ f(x)$, i.e., if $x$ is non-dominated in the feasible decision space. A non-dominated solution exists if no other solution provides a better trade-off in all objectives. Consequently, the set of all Pareto-Optimal solutions is known as the Pareto-Optimal Set (PS), while the image of this set is referred to as the Pareto-optimal Front (PF).% We recall that weak dominance ($A \succeq B$) means that any solution in set B is weakly dominated by a solution in set A. However, this does not rule out equality, because $A \succeq A$ for all approximation sets $A$~\cite{zitzler2003performance}.
+This balance is defined by the concept of ``pareto dominance''. Given two solutions vectors $u, v$ in $\mathbb{R}^{D}$, we said that $u$  Pareto-dominates $v$, denoted by $f(u) \prec f(v)$, if and only if $f_k(u) \leq f_k(v), \forall_k \in \{1,..., m\}$ and $ f(u) \neq f(v)$. Likewise, a solution $x \in \mathbb{R}^{D}$ is considered Pareto-Optimal if there exists no other solution $y \in \mathbb{R}^{D}$ such that $f(y) \succ f(x)$, i.e., if $x$ is non-dominated in the feasible decision space. A non-dominated solution exists if no other solution provides a better trade-off in all objectives. Consequently, the set of all Pareto-Optimal solutions is known as the Pareto-Optimal Set (PS), while the image of this set is referred to as the Pareto-optimal Front (PF).% We recall that weak dominance ($A \succeq B$) means that any solution in set B is weakly dominated by a solution in set A. However, this does not rule out equality, because $A \succeq A$ for all approximation sets $A$~\cite{zitzler2003performance}.
 %\\
 %\vspace{-1em}
 \begin{equation}
@@ -57,7 +57,7 @@ not yet well explored.
 In this paper, we define a priority function based on diversity on the objective space using the MRDL, proposed by Gee~\cite{gee2015online}. The MRDL is an online diversity metric based on a geometrical perspective and indicates the loss of diversity related to a solution to the whole population. We understand that this priority function is able to monitor diversity during the execution of the algorithm guiding the search behavior of the algorithm.
 
 
-We compare the new approach with the MOEA/D-DRA and with the standard MOEA/D (with no priority function). The results show that a priority function focused on decision space lead to better results on the metric Hypervolume (HV).
+We compare the new approach with the MOEA/D-DRA and with the standard MOEA/D (with no Resource Allocation). The results show that a priority function focused on decision space lead to better results on the metric Hypervolume (HV), for some groups of problems.
 
 
 % The diversity on the decision space shows better performance on the benchmark function,  generally being better than using the Relative Improvement. To our surprise, priority function on objective space did not perform so well, barely improving the results compared with no Resource Allocation at all. On the Lunar Landing problem, all methods achieved similar HV values but, the proposed priority function obtained higher proportion of feasible solutions.

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.6.20)  4 MAR 2019 15:18
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.6.20)  4 MAR 2019 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -443,8 +443,19 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 3.
 
-Overfull \hbox (10.58012pt too wide) in paragraph at lines 8--9
-\OT1/ptm/m/n/10 posed by MOEA/D-GRA [Zhou 16], MOEA/D-DRA [Zhang
+Overfull \hbox (1.86916pt too wide) in paragraph at lines 6--7
+\OT1/ptm/m/n/10 re-sources among sub-prob-lems by mon-i-tor-ing the al-go-rithm
+
+ []
+
+
+Overfull \hbox (1.9397pt too wide) in paragraph at lines 8--9
+\OT1/ptm/m/n/10 first is com-posed by MOEA/D-GRA [Zhou 16], MOEA/D-
+ []
+
+
+Overfull \hbox (11.67995pt too wide) in paragraph at lines 8--9
+\OT1/ptm/m/n/10 posed by EAG-MOEA/D [Cai 15] and MOEA/D-CRA [Kang
  []
 
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <10> not available
@@ -465,10 +476,6 @@ ng
  []
 
 ) (./3_method.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Overfull \hbox (8.95798pt too wide) in paragraph at lines 30--31
 []\OT1/ptm/m/n/10 We ini-tial-ize the value of the vec-tor $\OML/cmm/m/it/10 u 
 \OT1/cmr/m/n/10 = 1$\OT1/ptm/m/n/10 , as in MOEA/D-
@@ -529,42 +536,35 @@ Overfull \hbox (5.3549pt too wide) in paragraph at lines 61--126
  []
 
 
-Overfull \hbox (17.30911pt too wide) in paragraph at lines 144--145
-\OT1/ptm/m/n/10 the best and F32 (mod-er-ate and multi-modal) where MOEA/D-
- []
-
-
-Overfull \hbox (1.87859pt too wide) in paragraph at lines 148--149
-\OT1/ptm/m/n/10 classes: moderate-conditioned or weakly-structured. while
- []
-
-
-Overfull \hbox (1.19731pt too wide) in paragraph at lines 150--151
-[]\OT1/ptm/m/n/10 In sum-mary, these re-sults show that MOEA/D-RAD per-
- []
-
-
-Overfull \hbox (4.13997pt too wide) in paragraph at lines 165--166
-\OT1/ptm/m/n/10 sub-prob-lem on bbob-biobj-26 and bbob-biobj-32 prob-lems.
+Overfull \hbox (21.02971pt too wide) in paragraph at lines 166--172
+\OT1/ptm/m/n/10 hy-per-vol-ume per-for-mance and the pro-por-tion of non-domina
+ted
  []
 
 ) (./6_conclusion.tex
-Overfull \hbox (4.00832pt too wide) in paragraph at lines 4--5
-\OT1/ptm/m/n/10 BiB-BOB bench-mark func-tions. This al-go-rithm dif-fers from
+Overfull \hbox (16.62846pt too wide) in paragraph at lines 3--4
+\OT1/ptm/m/n/10 source Al-lo-ca-tion in Multi-Objective Op-ti-miza-tion, MOEA/D
+-
  []
 
 
-Overfull \hbox (2.36858pt too wide) in paragraph at lines 8--9
+Overfull \hbox (2.36858pt too wide) in paragraph at lines 7--8
 []\OT1/ptm/m/n/10 We have com-pared the new ap-proach with the MOEA/D-
  []
 
-[5]
-Overfull \hbox (0.36765pt too wide) in paragraph at lines 12--13
+
+Overfull \hbox (22.71857pt too wide) in paragraph at lines 9--10
+\OT1/ptm/m/n/10 biobj, spe-cially in func-tions that are in the moderate-condit
+ioned
+ []
+
+
+Overfull \hbox (0.36765pt too wide) in paragraph at lines 11--12
 []\OT1/ptm/m/n/10 Since the Re-source Al-lo-ca-tion dis-tri-bu-tion of MOEA/D-
  []
 
-)
-Overfull \hbox (4.84917pt too wide) in paragraph at lines 17--87
+[5])
+Overfull \hbox (4.84917pt too wide) in paragraph at lines 16--87
 \OT1/ptm/m/n/10 source Al-lo-ca-tion and archive based pri-or-ity func-tions, s
 uch
  []
@@ -601,10 +601,10 @@ Overfull \hbox (1.40524pt too wide) in paragraph at lines 98--98
 Here is how much of TeX's memory you used:
  4279 strings out of 493281
  60850 string characters out of 6145041
- 173438 words of memory out of 5000000
+ 173437 words of memory out of 5000000
  8103 multiletter control sequences out of 15000+600000
  28874 words of font info for 101 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 36i,14n,43p,1387b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,14n,43p,1427b,556s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on moead_rad.dvi (8 pages, 74652 bytes).
+Output written on moead_rad.dvi (8 pages, 73092 bytes).
