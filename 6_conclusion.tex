@@ -1,0 +1,18 @@
+\section{Conclusion}
+
+%Restating the aims of the study
+The aim of the present research was to investigate how the proposed algorithm, MOEA/D-RAD performs in the BiBBOB benchmark functions. This algorithm differs from the standard MOEA/D by using Resource Allocation techniques computational effort proportional to each subproblem's difficulty. 
+
+MOEA/D-RAD uses a priority function based on a geometrical perspective, MRDL, for Resource Allocation. This algorithm determines the computational resource assigned to each subproblem, based on its contribution to the overall diversity of the population.
+
+We have compared the new approach with the MOEA/D-DE and a variant with dynamic resource allocation strategy, MOEA/D-DRA, and the experimental results suggested our method performs well on many test problems.
+
+This study has shown that MOEA/D-RAD out-performs MOEA/D-DE and MOEA/D-DRA, since it achieved high HV values in many functions. Although MOEA/D-DRA lead to the highest rate of non-dominated solutions in the final solution set, MOEA/D-RAD could be seem as an improvement to the MOEA/D-DE proportion values.
+
+Since the Resource Allocation distribution of MOEA/D-RAD is not so much different to the one of MOEA/D-DE we understand that this explains why the results in the hypervolume metric of the MOEA/D-RAD tend to be better, but not so much different to the hypervolume values of the MOEA/D-DE. Consequently, we conclude that MOEA/D-RAD does represent a improvement in diversity not only since it improves the hypervolume metrics in many functions but since for \textit{all} functions the proportion of non-dominated solutions is always higher.
+
+Overall, the findings of this work strengthens the idea that Resource Allocation techniques are worth of attention, specially those that focuses on critical issues (such as diversity in the object space). This suggests the choice of priority functions is a critical component of a Resource Allocation system. Our results indicate that MOEA/D-RAD might be a  reasonable choices MOP where at least one objective is in one of the following classes: separable; moderate-conditioned; and ill-conditioned. It is crucial to  explore this further.
+
+
+In this work, we do not yet consider archive based Resource Allocation and archive based priority functions, such as MOEA/D-CRA~\cite{kang2018collaborative}. We will address this issue in a continuation to this study. There are many components and variants of MOEA/D and is interesting to combine the Norm priority function with the them. Then, we can further explore the relationship of priority functions based on diversity with others components and variants of the MOEA/D framework. How to define more efficient and effective utility functions for different problems is also worth further investigation (such as priority function that also consider constraints) as well as to verify the results of using priority function in other real-world problems.
+%

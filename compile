@@ -1,0 +1,5 @@
+platex moead_rad
+pbibtex moead_rad
+platex moead_rad
+platex moead_rad
+dvipdfm moead_rad

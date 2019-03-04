@@ -1,0 +1,103 @@
+\begin{thebibliography}{}
+
+\bibitem[Cai 15]{cai2015external}
+Cai,~X., Li,~Y., Fan,~Z., and Zhang,~Q.: An external archive guided
+  multiobjective evolutionary algorithm based on decomposition for
+  combinatorial optimization, {\em IEEE Transactions on Evolutionary
+  Computation}, Vol.~19, No.~4, pp. 508--523 (2015)
+
+\bibitem[Campelo 18]{moeadr_package}
+Campelo,~F. and Aranha,~C.: MOEADr: Component-Wise MOEA/D Implementation, URL
+  https://cran.R-project.org/package=MOEADr (2018), R package version 1.2.0
+
+\bibitem[Chankong 83]{chankong1983multiobjective}
+Chankong,~V. and Haimes,~Y.: Multiobjective Decision Making: Theory and
+  Methodology North Holland, {\em New York} (1983)
+
+\bibitem[Chiang 11]{chiang2011moea}
+Chiang,~T.-C. and Lai,~Y.-P.: MOEA/D-AMS: Improving MOEA/D by an adaptive
+  mating selection mechanism, in {\em Evolutionary Computation (CEC), 2011 IEEE
+  Congress on}, pp. 1473--1480IEEE (2011)
+
+\bibitem[Finck 10]{finck2010real}
+Finck,~S., Hansen,~N., Ros,~R., and Auger,~A.: Real-parameter black-box
+  optimization benchmarking 2009: Presentation of the noiseless functions,
+  Technical report, Citeseer (2010)
+
+\bibitem[Gee 15]{gee2015online}
+Gee,~S.~B., Tan,~K.~C., Shim,~V.~A., and Pal,~N.~R.: Online diversity
+  assessment in evolutionary multiobjective optimization: A geometrical
+  perspective, {\em IEEE Transactions on Evolutionary Computation}, Vol.~19,
+  No.~4, pp. 542--559 (2015)
+
+\bibitem[Hansen 11]{hansen2011impacts}
+Hansen,~N., Ros,~R., Mauny,~N., Schoenauer,~M., and Auger,~A.: Impacts of
+  invariance in search: When CMA-ES and PSO face ill-conditioned and
+  non-separable problems, {\em Applied Soft Computing}, Vol.~11, No.~8, pp.
+  5755--5769 (2011)
+
+\bibitem[Kang 18]{kang2018collaborative}
+Kang,~Q., Song,~X., Zhou,~M., and Li,~L.: A Collaborative Resource Allocation
+  Strategy for Decomposition-Based Multiobjective Evolutionary Algorithms, {\em
+  IEEE Transactions on Systems, Man, and Cybernetics: Systems} (2018)
+
+\bibitem[Li 09]{li2009multiobjective}
+Li,~H. and Zhang,~Q.: Multiobjective optimization problems with complicated
+  Pareto sets, MOEA/D and NSGA-II, {\em IEEE Transactions on evolutionary
+  computation}, Vol.~13, No.~2, pp. 284--302 (2009)
+
+\bibitem[Mostaghim 03]{mostaghim2003strategies}
+Mostaghim,~S. and Teich,~J.: Strategies for finding good local guides in
+  multi-objective particle swarm optimization (MOPSO), in {\em Swarm
+  Intelligence Symposium, 2003. SIS'03. Proceedings of the 2003 IEEE}, pp.
+  26--33IEEE (2003)
+
+\bibitem[Nasir 11]{nasir2011improved}
+Nasir,~M., Mondal,~A.~K., Sengupta,~S., Das,~S., and Abraham,~A.: An improved
+  multiobjective evolutionary algorithm based on decomposition with fuzzy
+  dominance, in {\em Evolutionary Computation (CEC), 2011 IEEE Congress on},
+  pp. 765--772IEEE (2011)
+
+\bibitem[Tan 08]{tan2008evolutionary}
+Tan,~K.~C., Goh,~C.~K., Mamun,~A., and Ei,~E.: An evolutionary artificial
+  immune system for multi-objective optimization, {\em European Journal of
+  Operational Research}, Vol. 187, No.~2, pp. 371--392 (2008)
+
+\bibitem[Tusar 16]{tusar2016coco}
+Tusar,~T., Brockhoff,~D., Hansen,~N., and Auger,~A.: COCO: the bi-objective
+  black box optimization benchmarking (bbob-biobj) test suite, {\em arXiv
+  preprint arXiv:1604.00359} (2016)
+
+\bibitem[Zhang 07]{zhang2007moea}
+Zhang,~Q. and Li,~H.: MOEA/D: A multiobjective evolutionary algorithm based on
+  decomposition, {\em IEEE Transactions on evolutionary computation}, Vol.~11,
+  No.~6, pp. 712--731 (2007)
+
+\bibitem[Zhang 08]{zhang2008rm}
+Zhang,~Q., Zhou,~A., and Jin,~Y.: RM-MEDA: A regularity model-based
+  multiobjective estimation of distribution algorithm, {\em IEEE Transactions
+  on Evolutionary Computation}, Vol.~12, No.~1, pp. 41--63 (2008)
+
+\bibitem[Zhang 09]{zhang2009performance}
+Zhang,~Q., Liu,~W., and Li,~H.: The performance of a new version of MOEA/D on
+  CEC09 unconstrained MOP test instances, in {\em Evolutionary Computation,
+  2009. CEC'09. IEEE Congress on}, pp. 203--208IEEE (2009)
+
+\bibitem[Zhou 16]{zhou2016all}
+Zhou,~A. and Zhang,~Q.: Are all the subproblems equally important? Resource
+  allocation in decomposition-based multiobjective evolutionary algorithms,
+  {\em IEEE Transactions on Evolutionary Computation}, Vol.~20, No.~1, pp.
+  52--64 (2016)
+
+\bibitem[Zitzler 98]{zitzler1998multiobjective}
+Zitzler,~E. and Thiele,~L.: Multiobjective optimization using evolutionary
+  algorithms―a comparative case study, in {\em International conference on
+  parallel problem solving from nature}, pp. 292--301Springer (1998)
+
+\bibitem[Zitzler 03]{zitzler2003performance}
+Zitzler,~E., Thiele,~L., Laumanns,~M., Fonseca,~C.~M., and Da~Fonseca,~V.~G.:
+  Performance assessment of multiobjective optimizers: An analysis and review,
+  {\em IEEE Transactions on evolutionary computation}, Vol.~7, No.~2, pp.
+  117--132 (2003)
+
+\end{thebibliography}

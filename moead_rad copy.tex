@@ -1,0 +1,99 @@
+%% Template for English Papers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \documentclass[english]{jpnsecart}                   % English Original Paper
+
+%% For JPNSEC office %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% You don't need to modify them. 
+\received{2010}{8}{1}
+\stuffincharge{XX\hspace{0.5zh} XX}
+\setcounter{page}{1}
+%\setcounter{volpage}{1}
+\Vol{1}
+\No{1}
+
+%% CAUSION for amsmath package users %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackpage{amsmath}
+% equation No. should be reffered by the \eqref, not \ref
+% specify the "fleqn" as the option of documentclass command
+% ex. \documentclass[technicalpaper,fleqn]{jpnsecart}
+%\usepackage{evocomp}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\addcontentsline{toc}{chapter}{Bibliography}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{booktabs}
+
+\usepackage{colortbl}
+
+\newcommand{\gray}{\rowcolor[gray]{.90}}
+
+
+%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\etitle{MOEA/D-RAD - Resource Allocation by Diversity}
+% \etitle[English Title for Headers]{English Title}
+%\esubtitle{Resource Allocation by Diversity}
+
+%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% when authers whose affilication is the same is succeed, 
+% use \affiliation macro for the top of the succeed authers 
+% and use \sameaffiliation for the rest of the authors.
+% Delete the following line if the number of author is less than four.
+\manyauthor 
+\author{%
+ \name{Yuri}{Lavinas}
+ \affiliation{University of Tsukuba, Graduate School of Systems and Information Engineering, Japan}%
+     {yclavinas@gmail.com}
+\and
+ \name{Claus}{Aranha}
+  \sameaffiliation{caranha@cs.tsukuba.ac.jp}
+\and
+ \name{Tetsuya}{Sakurai}
+ \sameaffiliation{sakurai@cs.tsukuba.ac.jp}
+}
+
+%% Keywords, Summary %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{keyword}
+	Resource Allocation, Diversity assessment, Multiobjective Optimization, Priority Functions.
+\end{keyword}
+
+\begin{summary}
+	\input{0_abstract.tex}
+\end{summary}
+
+%% Body %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\input{1_intro_copy.tex}
+\input{2_stateoftheart.tex}
+\input{3_method.tex}
+\input{4_experimentaldesign.tex}
+\input{5_results.tex}
+\input{6_conclusion.tex}
+
+\bibliography{sample}
+\bibliographystyle{jpnsec}
+
+%\bibliographystyle{IEEEtran}
+
+%\bibliography{sample}
+%\bibliographystyle{jpnsec}
+
+%
+%􏰂
+%
+%\begin{biography}
+%\profile{m}{進化 太郎}{著者の略歴}{portrait}
+%\end{biography}
+
+
+%\appendix
+%\section{Appendix}
+%
+%%% Biography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

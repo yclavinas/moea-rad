@@ -1,0 +1,83 @@
+\section{Proposed Method}
+In this work we propose a variant of the MOEA/D, the MOEA/D with online Resource Allocation by Diversity Metric (MOEA/D-RAD). This algorithm uses the maximum relative diversity loss, MRDL, for determining the values of the priority function. 
+
+
+\begin{algorithm}[h]
+	\caption{MOEA/D-RAD}\label{alg1}
+	\begin{algorithmic}[1]
+		
+		\State Initialize the weight vectors $\lambda_i$, the neighborhood $B_i$, the priority value $u_i$ every subproblem $i=1,...,N$.
+		
+		\While{\textit{Termination criteria}}
+		\For {1 to N}
+		\If{$\textit{rand()} < u_i$}
+		\State Generate an offspring $y$ for subproblem $i$.
+		\State Update the population by $y$.
+		\EndIf
+		\EndFor
+		\State  Evaluate and after $\Delta T$ iterations, keep updating \textit{\textbf{u}} by a priority function.
+		\EndWhile
+	\end{algorithmic}
+	%\vspace{-1em}
+\end{algorithm}
+
+MOEA/D-RAD is described in algorithm~\ref{alg1}. This basic algorithm is similar to the MOEA/D-DE~\cite{zhang2009performance} with exception of lines 4 and 7. Line 4 deals with the selection of solutions given their priority function values, while the line 7 deals with the calculation of the priority function values. All other procedures and parameters are the same as in MOEA/D-DE~\cite{li2009multiobjective}. We highlight that the neighborhood is only calculated in the initialization period.
+
+%\subsection{Priority Functions}
+
+The selection of priority functions provides an important way to control MOEA/D. They allow ways of designing MOEA/D variants that might focus on desired characteristics, such as diversity, performance contribution, convergence to a specific region of the PF or others. This is possible because different methods can be used as priority functions to create the vector $u$ in algorithm~\ref{alg1}. 
+
+We initialize the value of the vector $u=1$, as in MOEA/D-DRA. As in DRA and GRA we have a learning period of $\Delta T$ iterations. Here $\Delta T=20$ as in MOEA/D-GRA~\cite{zhou2016all}. A sensitivity analysis should be performed for deciding suitable initial values for $u$ and for $\Delta T$.
+
+ It should also be noted that if the priority function values results in less than 3 subproblems being updated in one iteration, we reset the priority vector $u = 1$  and all subproblems will be chosen for offspring reproduction at the that iteration.
+
+
+\subsection{Priority Function - MRDL} 
+
+
+\begin{algorithm}[t]
+	\caption{MRDL}\label{alg2}
+	\begin{algorithmic}[1]
+		
+		\State Input: old MRDL (initial value is 0); $Y^t$, objective function values from the incumbent solutions; $Y^{t-1}$, objective function values from the incumbent solutions of the previous iteraction; N, the population size.		
+		\For {i=1 to N}
+		\State find index $h$ where  ($Y^{t-1}_h \succeq Y^t_i$) and $||Y^{t-1}_h - Y^t_i  ||$ is minimal.
+		\If {If none is found} 
+		\State MRDL[i] = $-\infty$
+		\Else
+		\State $d.conv = Y^t_i - Y^{t-1}_h$.
+		\For {j=1 to N}
+		\State $p \prime = Y^{t-1}_j - Y^{t-1}_h$
+		\State $c \prime = Y^t_j - Y^t_i$
+		\State $proj_{d.conv}*p \prime = \dfrac{sum(conv \cdot p \prime)}{(p \prime \times p \prime)}*p \prime$
+		
+		\State $ proj_{d.conv}*c \prime = \dfrac{sum(conv \cdot c \prime)}{(c \prime \times c \prime)}*c \prime$
+		
+		\State $RDL_j = \dfrac{ ||p \prime - proj_{d.conv}p \prime|| }{||c \prime - proj_{d.conv}c \prime||}$\\
+		
+		\EndFor
+		MRDL[i] = maximum $RDL$
+		\EndIf
+		\EndFor
+		\State u = 1 - scale (MRDL - old MRDL) // between 0 and 1\\
+	\Return u, MRDL
+	\end{algorithmic}
+\end{algorithm}
+
+To consider diversity on the objective space, we propose a priority function based on the the Maximum Relative Diversity Loss, MRDL~\cite{gee2015online}.
+
+
+The diversity on objective space as a priority function  is based on the Maximum Relative Diversity Loss, MRDL~\cite{gee2015online}.  The idea of using MRDL is that by measuring diversity on the objective space, more resources are given to incumbent solutions that have similar objective function values between two consecutive iteractions. Therefore, it is expected that this will lead to a higher exploration of the objective space. Algorithm~\ref{alg2} gives the details on implementation.
+
+The calculation of MRDL depends on the concept of weak dominance~\cite{zitzler2003performance}. A solution $a$ weakly dominates $b$ if in all objectives $a \geq b$ (note that $a \succeq a$).
+ 
+Let $N$ be the number of incumbent solutions and the objective values of iteraction $t$ be $Y^t$ and the objectives values of iteraction $t-1$ be $Y^{t-1}$. For each incumbent solution $i$, find index $h \in Y^{T-1}$. This index is the index of a parent that weak dominates the solution $i$. If $h$ is not found (no parent weak dominates the solution) the MRDL value for this solution is set to $-\infty$. Given $i$ and $h$, for each subproblem, the value of Relative Diversity Loss (RDL) is given by 
+
+\begin{equation}
+RDL = \dfrac{ ||p \prime - proj_{d.conv}p \prime|| }{||c \prime - proj_{d.conv}c \prime||}.
+\end{equation}
+
+
+RDL is a diversity measurement quantity that indicates the amount of diversity loss of an individual solution between two consecutive iterations. High values of RDL imply a reduction of the solution spread, since the further an objective vector of a solution is from the convergence direction, the more it contributes in terms of diversity in the objective space~\cite{gee2015online}. The maximum value of RDL is the MRDL of the solution $i$.
+
+

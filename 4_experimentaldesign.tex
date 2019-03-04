@@ -1,0 +1,65 @@
+\section{Experimental Design}
+
+%\begin{table}[!t]
+%	\centering
+%\begin{tabular}{@{}|l|l|@{}}
+%		\toprule
+%		\textbf{Parameters}   & \textbf{Values}          \\ \midrule
+%		Initial value $u$     & 0.5, for every subproblem \\ 
+%		Population size       & 150                      \\
+%		Neighborhood size T & 20 \\ 
+%		$\delta_p$ & 0.9 \\ 
+%		$\phi$ & 0.5 \\ 
+%		$\eta_m$ & 20 \\
+%		$p_m$ & 0.03333333 \\
+%		$n_r$ & 2 \\
+%		\midrule
+%		Number of evaluations & 60000 		\\		
+%		Number of repetitions & 21                  \\ \bottomrule
+%
+%	\end{tabular}
+%\vspace{1em}
+%\caption{Parameter settings.}
+%\label{table1}
+%\end{table}
+
+To examine the effects of MOEA/D-RAD we perform a comparative experiment of BiBBOB benchmark functions. In this experiment, we use the MOEA/D-DE implemented by the MOEADr package~\cite{moeadr_package}, modified to include Resource Allocation as described in the previous section. We compare three different algorithms MOEA/D-DE and MOEA/D-DRA as well as the proposed MOEA/D-RAD.
+
+\subsection{Target Problems}\label{target_problems}
+
+The Black-Box Optimization Bi-Objective Benchmark (bbob-biobj) test functions~\cite{tusar2016coco} are used as our benchmark problem sets. This test suit is composed of 55 bi-objective functions combined into 15 different classes.
+
+We list below the function classes:
+
+\begin{itemize}
+	\item Group 1: separable - separable;% ($f_1, f_2, f_{11}$)
+    \item Group 2: separable - moderate;% ($f_3, f_4, f_{12}, f_{13}$)
+	\item Group 3: separable - ill-conditioned;% ($f_5, f_6, f_{14}, f_{15}$)
+	\item Group 4: separable - multi-modal;% ($f_7, f_8, f_{16}, f_{17}$)
+	\item Group 5: separable - weakly-structured;% ($f_9, f_{10}, f_{18}, f_{19}$)
+	\item Group 6: moderate - moderate;% ($f_{20}, f_{21}, f_{28}$)
+	\item Group 7: moderate - ill-conditioned;% ($f_{22}, f_{23}, f_{29}, f_{30}$)
+	\item Group 8: moderate - multi-modal;% ($f_{24}, f_{25}, f_{31}, f_{32}$)
+	\item Group 9: moderate - weakly-structured;% ($f_{26}, f_{27}, f_{33}, f_{34}$)
+	\item Group 10: ill-conditioned - ill-conditioned;% ($f_{35}, f_{36}, f_{41}$)
+	\item Group 11: ill-conditioned - multi-modal;% ($f_{37}, f_{38}, f_{42}, f_{43}$)
+	\item Group 12: ill-conditioned - weakly-structured;% ($f_{39}, f_{40}, f_{44}, f_{45}$)
+	\item Group 13: multi-modal - multi-modal;% ($f_{46}, f_{47}, f_{50}$)
+	\item Group 14: multi-modal - weakly structured;% ($f_{48}, f_{49}, f_{51}, f_{52}$)
+	\item Group 15: weakly-structured - weakly-structured.% ($f_{53}, f_{54}, f_{55}$)
+\end{itemize}
+
+Here we give a simple explanation of the classes. A separable function does not show any dependencies between the variables while a multi-modal function have at least two minima. Moderate- and ill-conditioned have a high sensitivity in the contribution of a solution to the objective function value~\cite{hansen2011impacts}. Finally, a weakly-structured function is a function that the general structure is very unclear~\cite{finck2010real}.
+
+
+\subsection{Experimental Parameters}
+
+We use the conventional MOEA/D-DE parameters~\cite{li2009multiobjective} for each Resource Allocation strategy: update size $nr = 2$, neighborhood size $T = 20$, and the neighborhood search probability $\delta_p = 0.9$. The DE mutation operator value is $phi=0.5$. The Polynomial mutation operator values are $\eta_m 20$ and $p_m = 0.03333333$. The decomposition function is Simple-Lattice Design (SLD), the scalar aggregation function is Weighted Sum (WS), the update strategy is the Restricted Update Strategy and we performed a simple linear scaling of the objectives to [0, 1].
+
+For every strategy/function pair we perform 21 repetitions with 30000 function evaluations and population size $N=150$.
+
+\subsection{Experimental Evaluation}
+
+We compare the results of the different strategies based on their Hypervolume (HV) metric. Higher values of the HV indicate better approximations of the Pareto Front. % We also evaluate the proportion of non-dominated solutions and the number of feasible solutions.
+
+For the calculation of HV, the objective function was scaled to the $0,1$ interval, and the reference point was set to $(1,1)$. To verify any statistical differences in the results for the different strategies, we use the Pairwise Wilcoxon Rank Sum Tests with confidence interval $\alpha = 0.05$ and with the Hommel adjustment method for multiple comparisons. %For reproducibility purposes, all the code and data used in these experiments are available at [ANONYMIZED].
