@@ -162,15 +162,27 @@ groups. This post-hoc analysis suggests a follow up experiment to confirm this
 observations.
 
 \subsection{Proportion of Non-dominated Solutions}
-%
-%
-%
-Another difference that we see among the algorithms  is the proportion of non dominated solutions. The results on the~\ref{stats} indicate that MOEA/D-DRA leads to the highest rate of non-dominated solutions in the final solution set, followed by MOEA/D-RAD. In general, both substantially improve this proportion over the results of MOEA/D-DE.  It seems that there is no relation in hypervolume performance and the proportion of non-dominated solutions.
+
+Another difference that we see among the algorithms  is the proportion of non
+dominated solutions. The results on the~\ref{stats} indicate that MOEA/D-DRA
+leads to the highest rate of non-dominated solutions in the final solution set,
+followed by MOEA/D-RAD. In general, both substantially improve this proportion
+over the results of MOEA/D-DE.  It seems that there is no relation between
+hypervolume performance and the proportion of non-dominated solutions.
 
 
 \subsection{Resource Allocation}
 
 
-~\ref{RAs1} and ~\ref{RAs2} illustrate the amount resource allocated by MOEA/D-DRA and MOEA/D-RAD to every subproblem on bbob-biobj-26 and bbob-biobj-32 problems. We show images from these functions due to space limitations. We exclude the visuals from MOEA/D-DE since it give the same amount of resource to every problem (200).
+\ref{RAs1} and \ref{RAs2} illustrate the amount resource allocated by MOEA/D-DRA
+and MOEA/D-RAD to each subproblem on problems F26 and F32. MOEA/D-DE is
+not included since it does not perform resource allocation.
 
-It is clear from the Figures that MOEA/D-RAD and MOEA/D-DRA influence differently the Resource Allocation. It is also important to highlight that, during the execution of the algorithm, the Resource Allocation done by MOEA/D-RAD to each subproblem is similar and not very far from 200, the default amount as well as the Resource Allocation done by MOEA/D-DE. The Resource Allocation done by MOEA/D-DRA depends on the problem indicating a more adaptive behavior.
+These figures show how the choice of priority function influences the
+resource allocation. The resource allocation by MOEA/D-DRA is much more
+adaptive to each problem, while the resource allocation done by
+MOEA/D-RAD is more conservative and uniform.
+
+However, even though the resource allocation behavior seen in these figures
+may seem limited, it is clear from \ref{stats} that it has a deep impact on
+the performance of the algorithm.
