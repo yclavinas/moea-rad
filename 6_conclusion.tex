@@ -1,17 +1,48 @@
 \section{Conclusion}
 
-In this research, we propose a new algorithm for Resource Allocation in Multi-Objective Optimization, MOEA/D-RAD. The performance of this algorithm is studied on the bbob-biobj. benchmark functions. This algorithm differs from the standard MOEA/D by using Resource Allocation techniques computational effort proportional to each subproblem's difficulty. 
+In this research, we propose a new algorithm for Resource Allocation in
+Multi-Objective Optimization, MOEA/D-RAD. The performance of this algorithm is
+studied on the bbob-biobj benchmark function set. This algorithm differs from
+standard MOEA/D by the use of Resource Allocation techniques, which allocate
+computational effort proportional to each subproblem's difficulty.
 
-MOEA/D-RAD uses a priority function based on a geometrical perspective, MRDL, for Resource Allocation. This algorithm determines the computational resource assigned to each subproblem, based on its contribution to the overall diversity of the population.
+MOEA/D-RAD performs Resource Allocation using MRDL as a priority function based
+on a geometrical perspective. In this sense, MOEA/D-RAD allocates computational
+resources to different subproblems based on its contribution to the overall
+diversity of the population.
 
-We have compared the new approach with the MOEA/D-DE and a variant with dynamic resource allocation strategy, MOEA/D-DRA, and the experimental results suggested our method performs well on many test problems.
+We compared this new approach with MOEA/D-DRA, which is another
+Resource Allocation strategy. MOEA/D-DRA allocates computational resources
+based on the difference between parent and child solutions. We also compared
+with MOEA/D-DE without Resource Allocation strategy.
 
-MOEA/D-RAD showed a better performance on bbob-biobj, specially in functions that are in the  moderate-conditioned and weakly-structured groups. Although MOEA/D-DRA lead to the highest rate of non-dominated solutions in the final solution set, MOEA/D-RAD could be seem as an improvement to the MOEA/D-DE proportion values.
+The experimental results showed that MOEA/D-RAD performed well on several  of
+the test problems. In particular, we observed that MOEA/D-RAD performed well in
+functions that are moderate-conditioned and weakly-structured.  On the other
+hand, MOEA/D-DRA showed the highest rate of non-dominated  solutions in the
+final solution set.
 
-Since the Resource Allocation distribution of MOEA/D-RAD is not so much different to the one of MOEA/D-DE we understand that this explains why the results in the hypervolume metric of the MOEA/D-RAD tend to be better, but not so much different to the hypervolume values of the MOEA/D-DE. Consequently, we conclude that MOEA/D-RAD does represent a improvement in diversity not only since it improves the hypervolume metrics in many functions but since for \textit{all} functions the proportion of non-dominated solutions is always higher.
+In comparison with MOEA/D-DRA, the Resource Allocation by the proposed
+MOEA/D-RAD was less extreme. This might explain why MOEA/D-RAD and MOEA/D-DE
+were usually successful in similar functions, although MOEA/D-RAD always  had a
+better proportion of non-dominated solutions, and often achieved better
+hypervolume values than MOEA/D-DE. We understand that this shows that using the
+MRDL function as the priority function achieved its goal of promoting diversity
+in the solution set.
 
-Overall, the findings of this work strengthens the idea that Resource Allocation techniques are worth of attention, specially those that focuses on critical issues (such as diversity in the object space). This suggests the choice of priority functions is a critical component of a Resource Allocation system. Our results indicate that MOEA/D-RAD might be a  reasonable choices MOP where at least one objective is in one of the following groups: moderate-conditioned; and weakly-structured. It is crucial to  explore this further.
+Overall, the findings of this work reinforce the need of Resource Allocation for
+MOEA/D, and showcase particular types of functions where Resource Allocation
+techniques would be most useful. The differences between MOEA/D-DRA and
+MOEA/D-RAD also  suggests that the choice of priority function is a critical
+component of Resource Allocation and that this choice needs to be informed by
+the characteristics of the problem being solved.
 
+Our results indicate that the MRDL priority function might be a reasonable
+choice in problems where at least one objective is moderate-conditioned or
+weakly structured. However, as this observation came from a post-hoc analysis,
+further exploration is crucial to confirm this finding.
 
-In this work, we do not yet consider archive based Resource Allocation and archive based priority functions, such as MOEA/D-CRA~\cite{kang2018collaborative}. We will address this issue in a continuation to this study. There are many components and variants of MOEA/D and is interesting to combine the Norm priority function with the them. Then, we can further explore the relationship of priority functions based on diversity with others components and variants of the MOEA/D framework. How to define more efficient and effective utility functions for different problems is also worth further investigation (such as priority function that also consider constraints) as well as to verify the results of using priority function in other real-world problems.
-%
+Other future works include further consideration into priority functions  (such
+as objective-space and decision-space priority functions) as well as  Resource
+Allocation and priority functions based on Archive techniques,  such as
+MOEA/D-CRA~\cite{kang2018collaborative}.
